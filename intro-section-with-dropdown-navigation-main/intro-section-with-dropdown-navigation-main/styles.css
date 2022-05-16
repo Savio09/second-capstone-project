@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: hsl(0, 0%, 8%);
+    font-size: 18px;
+}
+
+header {
+    display: flex;
+    height: 10vh;
+    width: 95%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    margin-top: 10px;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    /*margin-right: 25px;*/
+    text-decoration: none;
+    color: hsl(0, 0%, 8%);
+    /*margin-top: 55px;*/
+}
+
+.menu {
+    display: none;   
+}
+
+.wrapper {
+    min-height: 100vh;
+    background: hsl(0, 0%, 98%);
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    width: 40%;
+}
+
+.links button {
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    font-weight: normal;
+    color:  hsl(0, 0%, 8%);
+    text-align: center;
+}
+
+.links button img {
+    margin-left: 3px;
+}
+
+.links .features,
+.links .company {
+    position: relative;
+}
+
+.features ul,
+.company ul {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    background-color: white;
+    list-style: none;
+    border-radius: 5px;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+}
+
+.features li,
+.company li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.features li:hover,
+.company li:hover{
+    background-color: hsl(0, 0%, 41%);
+    pointer-events: all;
+}
+
+.features li img{
+    margin-right: 10px;
+}
+
+.features button:focus + ul,
+.company button:focus + ul {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.ctas a {
+    margin-right: 25px;
+}
+
+.cta {
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.hero {
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.hero > div {
+    flex: 1;
+}
+
+.intro-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+}
+
+.intro-text .title {
+    margin: 100px 0 0 0;
+}
+
+.intro-text h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+}
+
+.intro-text .subtitle {
+    max-width: 400px;
+    margin: 30px 0;
+}
+
+.intro-text .subtitle p {
+    font-weight: 600;
+    color: hsl(0, 0%, 41%);
+}
+
+.intro-text .cta-3 {
+    width: fit-content;
+    background: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    padding: 10px 20px;
+    margin-bottom: 30px;
+}
+
+.intro-text .support img {
+    margin-right: 20px;
+}
+
+.right-item {
+    width: 100%;
+}
+
+.right-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mobile {
+    display: none;
+}
+
+/*Mobile design*/
+
+@media screen and (max-width: 780px) {
+    header {
+        width: 90%;
+    }
+    
+    nav {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .hero {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .intro-text {
+        align-items: center;
+        padding: 0 30px;
+        padding-bottom: 30px;
+    }
+
+    .intro-text h1 {
+        display: inline;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    .intro-text .subtitle {
+        text-align: center;
+    }
+
+    .cta-3 {
+        margin-top: 10px;
+    }
+
+    .support {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .support img {
+        width: 15%;
+        margin-right: 0;
+    }
+}
+
