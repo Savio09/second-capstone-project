@@ -14,11 +14,8 @@
   <title>New account form</title>
 </head>
 
-
 <body>
-
   <div class="container">
-
     <h3>Create a new account</h3>
     <div class="full-width d-flex justify-content-center and align-items-center">
       <form class="col">
@@ -73,46 +70,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"></script>
-    <script>
-      const submit = document.querySelector('.submit');
-      const form = document.querySelector('form');
-
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-      })
-
-      const input = document.querySelector('.email');
-      const info = document.querySelector('#info');
-      const password = document.querySelector('.passkey')
-      const confirmPassword = document.querySelector('.confirm')
-      const infoPass = document.querySelector('#info-pass')
-
-      // The validation process for the email
-
-      const validateEmail = (userInput) => {
-        let emailRegExp = /.@./ig;
-        let result = userInput.match(emailRegExp);
-        (result === null) ? info.innerHTML = 'This is not a valid email' : info.innerHTML = ''; // Playing with the tenary operator
-        if (!userInput) {
-          info.innerHTML = ''
-        }
-      }
-
-      const checkPassword = () => {
-        (password.value === confirmPassword.value) ? infoPass.innerHTML = "" : infoPass.innerHTML = "Passwords don't match";
-        if (!confirmPassword.value) {
-          infoPass.innerHTML = '';
-        }
-      }
-
-      input.addEventListener('keyup', () => {
-        validateEmail(input.value)
-      })
-
-      confirmPassword.addEventListener('keyup', () => {
-        checkPassword()
-      })
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
