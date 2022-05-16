@@ -43,9 +43,6 @@ a {
     /*margin-top: 55px;*/
 }
 
-.menu {
-    display: none;   
-}
 
 .wrapper {
     min-height: 100vh;
@@ -64,7 +61,7 @@ a {
     outline: none;
     border: none;
     background: transparent;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: normal;
     color:  hsl(0, 0%, 8%);
     text-align: center;
@@ -194,8 +191,54 @@ a {
     object-fit: cover;
 }
 
+
+.container{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    pointer-events: none;
+    z-index:1;   
+    opacity: 0;
+}
+
+.container > span{
+    width: 80%;
+    height: 4px;
+    margin: 3px auto;
+    border-radius: 10px;
+    background: black;
+    transition: all 0.4s ease-out;
+    box-shadow: 0px 2px 2px #333;
+}
+
+.change #bar1{
+    transform: rotate(45deg) translate(8px,10px);  
+    transition: all 0.4s ease-out; 
+}
+
+.change #bar2{
+    transform: translateX(-500px);
+    opacity: 0;
+    transition: transform 0.4s ease-out;
+}
+
+.change #bar3{
+    transform: rotate(-48deg) translate(4px,-7px);
+    transition: all 0.4s ease-out;
+    
+}
+
 .mobile {
     display: none;
+}
+
+.push#sidebar{
+    left: 0;
+    transition: all 0.4s ease-out;
 }
 
 /*Mobile design*/
@@ -205,12 +248,46 @@ a {
         width: 90%;
     }
     
-    nav {
-        display: none;
+    nav ul {
+       position: fixed; 
+       background-color: #726cee;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-evenly;
+       text-align: center;
+       width: 50%;
+       height: 100%;
+       left: -1000px;
+       z-index: 1;
     }
 
-    .menu {
-        display: block;
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        height: 50%;
+    }
+
+    .links button,
+    .links button a {
+        color: white;
+    }
+
+
+
+    .container {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .ctas .cta-1 {
+        border-color: white;
+    }
+
+    .ctas a {
+        color: white;
     }
 
     .hero {
@@ -259,4 +336,3 @@ a {
         margin-right: 0;
     }
 }
-
