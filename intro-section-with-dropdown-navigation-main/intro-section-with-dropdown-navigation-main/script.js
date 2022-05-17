@@ -7,11 +7,13 @@ form.addEventListener('submit', (e) => {
 
 const input = document.querySelector('.email');
 const info = document.querySelector('#info');
-const password = document.querySelector('.passkey')
-const confirmPassword = document.querySelector('.confirm')
-const infoPass = document.querySelector('#info-pass')
+const password = document.querySelector('.passkey');
+const confirmPassword = document.querySelector('.confirm');
+const infoPass = document.querySelector('#info-pass');
 const reveal = document.querySelector('#togglePassword');
-const strength = document.querySelector('#strength')
+const strength = document.querySelector('#strength');
+const username = document.querySelector('.username');
+const infoName = document.querySelector('#info-name')
 
 // The validation process for the email
 
@@ -41,20 +43,30 @@ reveal.addEventListener('click', function (e) {
 
 const passwordStrength = () => {
   if (password.value.length <= 5) {
-        strength.innerHTML = 'Strength: weak'
-        strength.style.color = 'red'
+        strength.innerHTML = 'Strength: weak';
+        strength.style.color = 'red';
     }
    if (password.value.length > 5) {
-        strength.innerHTML = 'Strength: strong'
-        strength.style.color = 'green'
+        strength.innerHTML = 'Strength: strong';
+        strength.style.color = 'green';
     }
     if(!password){
-        strength.innerHTML = ''
+        strength.innerHTML = '';
     }
 }
-
+const checkUserName = () => {
+    if(username.value.length < 4) {
+        infoName.innerHTML = 'Enter a valid username';
+    }
+    else {
+        infoName.innerHTML = '';
+    }
+    if (!username) {
+        infoName.innerHTML = '';
+    }
+}
 input.addEventListener('keyup', () => {
-    validateEmail(input.value)
+    validateEmail(input.value);
 })
 
 confirmPassword.addEventListener('keyup', () => {
