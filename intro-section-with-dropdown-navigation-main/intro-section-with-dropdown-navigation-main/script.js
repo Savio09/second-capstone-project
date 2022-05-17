@@ -47,7 +47,7 @@ const passwordStrength = () => {
         strength.innerHTML = 'Strength: weak'
         strength.style.color = 'red'
     }
-    else {
+    else if(password.value.length > 5) {
         strength.innerHTML = 'Strength: strong'
         strength.style.color = 'green'
     }
