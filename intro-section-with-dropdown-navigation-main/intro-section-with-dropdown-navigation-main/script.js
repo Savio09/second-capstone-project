@@ -62,7 +62,7 @@ const checkUserName = () => {
     else {
         infoName.innerHTML = '';
     }
-    if (!username.value || username.value.length === 0) {
+    if (!username.value || userna) {
         infoName.innerHTML = '';
     }
 }
