@@ -353,7 +353,6 @@ a {
     .ctas {
         display: flex;
         flex-direction: column;
-        background-color: red;
         width: 100%;
         align-items: center;
         justify-content: center;
