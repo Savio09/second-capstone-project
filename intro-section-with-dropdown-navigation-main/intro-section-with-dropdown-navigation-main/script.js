@@ -54,6 +54,7 @@ const passwordStrength = () => {
         strength.innerHTML = '';
     }
 }
+
 const checkUserName = () => {
     if(username.value.length < 4) {
         infoName.innerHTML = 'Enter a valid username';
@@ -65,14 +66,19 @@ const checkUserName = () => {
         infoName.innerHTML = '';
     }
 }
+
 input.addEventListener('keyup', () => {
     validateEmail(input.value);
 })
 
 confirmPassword.addEventListener('keyup', () => {
-    checkPassword()
+    checkPassword();
 })
 
 password.addEventListener('keyup', () => {
-    passwordStrength()
+    passwordStrength();
+})
+
+username.addEventListener('keyup', () => {
+    checkUserName();
 })
