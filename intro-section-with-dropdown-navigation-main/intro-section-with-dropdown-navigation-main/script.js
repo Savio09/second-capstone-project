@@ -10,6 +10,7 @@ const info = document.querySelector('#info');
 const password = document.querySelector('.passkey')
 const confirmPassword = document.querySelector('.confirm')
 const infoPass = document.querySelector('#info-pass')
+const reveal = document.querySelector('.reveal');
 
 // The validation process for the email
 
@@ -28,6 +29,14 @@ const checkPassword = () => {
         infoPass.innerHTML = '';
     }
 }
+reveal.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+
+});
 
 input.addEventListener('keyup', () => {
     validateEmail(input.value)
