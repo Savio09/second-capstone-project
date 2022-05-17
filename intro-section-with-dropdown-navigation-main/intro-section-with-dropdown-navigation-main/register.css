@@ -9,6 +9,7 @@ h3 {
 
 body {
     background-color: inherit;
+    height: 100vh;
 }
 
 @media (max-width:575.98px) {
