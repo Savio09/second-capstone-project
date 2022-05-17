@@ -11,10 +11,6 @@ body {
     background-color: inherit;
 }
 
-.full-width {
-    min-height: 100vh;
-}
-
 @media (max-width:575.98px) {
     form {
          width: 100%;
