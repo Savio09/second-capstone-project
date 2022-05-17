@@ -10,11 +10,8 @@ const info = document.querySelector('#info');
 const password = document.querySelector('.passkey')
 const confirmPassword = document.querySelector('.confirm')
 const infoPass = document.querySelector('#info-pass')
-<<<<<<< Updated upstream
 const reveal = document.querySelector('#togglePassword');
-=======
 const strength = document.querySelector('#strength')
->>>>>>> Stashed changes
 
 // The validation process for the email
 
