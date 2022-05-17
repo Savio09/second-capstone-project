@@ -10,7 +10,11 @@ const info = document.querySelector('#info');
 const password = document.querySelector('.passkey')
 const confirmPassword = document.querySelector('.confirm')
 const infoPass = document.querySelector('#info-pass')
+<<<<<<< Updated upstream
 const reveal = document.querySelector('#togglePassword');
+=======
+const strength = document.querySelector('#strength')
+>>>>>>> Stashed changes
 
 // The validation process for the email
 
@@ -38,10 +42,24 @@ reveal.addEventListener('click', function (e) {
 
 });
 
+const passwordStrength = () => {
+    if (password.value.length <= 5) {
+        strength.innerHTML = 'Strength: weak'
+        strength.style.color = 'red'
+    }
+    if(!password){
+        strength.innerHTML = ''
+    }
+}
+
 input.addEventListener('keyup', () => {
     validateEmail(input.value)
 })
 
 confirmPassword.addEventListener('keyup', () => {
     checkPassword()
+})
+
+password.addEventListener('keyup', () => {
+    passwordStrength()
 })
