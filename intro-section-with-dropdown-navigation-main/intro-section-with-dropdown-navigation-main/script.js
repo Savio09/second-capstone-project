@@ -10,7 +10,7 @@ const info = document.querySelector('#info');
 const password = document.querySelector('.passkey')
 const confirmPassword = document.querySelector('.confirm')
 const infoPass = document.querySelector('#info-pass')
-const reveal = document.querySelector('.reveal');
+const reveal = document.querySelector('#togglePassword');
 
 // The validation process for the email
 
