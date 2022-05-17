@@ -40,12 +40,16 @@ reveal.addEventListener('click', function (e) {
 });
 
 const passwordStrength = () => {
-    if (password.value.length <= 5) {
+    if(!password){
+        strength.innerHTML = ''
+    }
+  else if (password.value.length <= 5) {
         strength.innerHTML = 'Strength: weak'
         strength.style.color = 'red'
     }
-    if(!password){
-        strength.innerHTML = ''
+    else {
+        strength.innerHTML = 'Strength: strong'
+        strength.style.color = 'green'
     }
 }
 
