@@ -50,7 +50,7 @@ const passwordStrength = () => {
         strength.innerHTML = 'Strength: strong';
         strength.style.color = 'green';
     }
-    if(!password){
+    if(!password.value){
         strength.innerHTML = '';
     }
 }
@@ -62,7 +62,7 @@ const checkUserName = () => {
     else {
         infoName.innerHTML = '';
     }
-    if (!username) {
+    if (!username.value) {
         infoName.innerHTML = '';
     }
 }
